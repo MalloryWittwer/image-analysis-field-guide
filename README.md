@@ -1,30 +1,33 @@
-# The image analysis field guide
+# The Image Analysis Field Guide
 
-### Essential toolkit to get started in scientific image analysis
+## Installation
 
-Welcome! Use this field guide to quickly find the information you need to tackle your scientific image analysis challenges.
+```
+pip install -r requirements.txt
+```
 
-### 🔖 Getting started
+## Build the Jupyter book
 
----
+```
+jupyter-book build src/
+```
 
-New to image analysis? These short guides will help you start off on the right foot.
+Then, drag and drop `_build/html/index.html` in a web browser.
 
-[A recipe for success in image analysis](pages/recipe.md)
+## With `docker`
 
-### 📦 Starter packs
+```
+docker build -t $(whoami)/$(basename ${PWD}) .
+```
 
----
+Run the jupyter book on `http://localhost:8080/`.
 
-We’ve curated resources and grouped them by topic.
+```
+docker run --rm -it -p 8080:80 $(whoami)/$(basename ${PWD}):latest
+```
 
-- [Image denoising](packs/image-denoising/page.md)
-- [Image segmentation](packs/image-segmentation/page.md)
-- [Image registration](packs/image-registration/page.md)
+Persistent:
 
-
-### 🤝 Contribute
-
----
-
-Send an email to imaging@epfl.ch if you’d like to contribute to this repository. We’d be happy to receive your suggestions and to know more about the topics you are interested in.
+```
+docker run -dp 8080:80 --name image-analysis-field-guide $(whoami)/$(basename ${PWD}):latest
+```

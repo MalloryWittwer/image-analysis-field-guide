@@ -1,0 +1,4 @@
+jupyter-book
+jupyterlab
+jupytext
+jupyterlab_myst
