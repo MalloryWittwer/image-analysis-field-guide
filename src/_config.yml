@@ -12,8 +12,8 @@ launch_buttons:
 
 execute:
   # execute_notebooks: "cache"
-  # execute_notebooks: "auto"
-  execute_notebooks: "off"
+  execute_notebooks: "auto"
+  # execute_notebooks: "off"
 
 # Define the name of the latex output file for PDF builds
 latex:
