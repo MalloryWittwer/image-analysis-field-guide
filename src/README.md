@@ -10,8 +10,9 @@ Welcome! Use this field guide to quickly find the information you need to tackle
 
 New to image analysis? These short guides will help you start off on the right foot.
 
-- [A recipe for success in image analysis](./sections/getting_started/pages/recipe_success.md)
-- [Setup for scientific image analysis using Python](./sections/getting_started/pages/python_setup.md)
+- [✅ A recipe for success in image analysis](./sections/getting_started/pages/recipe_success.md)
+- [🐍 Setup for scientific image analysis using Python](./sections/getting_started/pages/python_setup.md)
+- [🚩 Starting a new image analysis project](./sections/getting_started/pages/new_project.md)
 
 ## 🚀 Starter packs
 
@@ -62,14 +63,15 @@ Performance optimization
 
 Browse our collections of online resources, python examples, and software tools related to image analysis.
 
-- [Online resources](./sections/exploring_further/online_resources/page.md)
-- [Notebooks case studies](./sections/exploring_further/notebook_case_studies/page.md)
-- [Software tools database](./sections/exploring_further/software_tools/page.md)
+- [🌐 Online resources](./sections/exploring_further/online_resources/page.md)
+- [💡 Notebooks case studies](./sections/exploring_further/notebook_case_studies/page.md)
+- [🛠️ Software tools database](./sections/exploring_further/software_tools/page.md)
 
 ## 🧑‍🤝‍🧑 Join the community
 
-Join us.
-
+- Join us on our *Matrix server* by connecting to [element.epfl.ch](https://element.epfl.ch/#/room/#image_analysis_hub-launchpad:epfl.ch).
+- Subscribe to our [Newsletter](https://imaging.epfl.ch/news) to catch up with our latest news and events.
+- Find more info at imaging.epfl.ch.
 
 ## 🤝 Contribute
 

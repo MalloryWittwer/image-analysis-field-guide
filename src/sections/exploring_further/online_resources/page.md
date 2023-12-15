@@ -10,10 +10,9 @@ kernelspec:
   language: python
   name: python3
 ---
-
 # 🌐 Online resources
 
-Find our list of resources available for free on the web on the topic of scientific image analysis.
+Browse our list of resources available for free on the web on the topic of scientific image analysis.
 
 ```{code-cell} ipython3
 :tags: [remove-input]

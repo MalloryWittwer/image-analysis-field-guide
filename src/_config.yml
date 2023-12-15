@@ -11,9 +11,11 @@ launch_buttons:
   jupyterhub_url: "https://noto.epfl.ch"  # The URL for your JupyterHub. (e.g., https://datahub.berkeley.edu)
 
 execute:
-  # execute_notebooks: "cache"
-  execute_notebooks: "auto"
+  execute_notebooks: "cache"
+  # execute_notebooks: "auto"
   # execute_notebooks: "off"
+  exclude_patterns:
+    - '*.ipynb'
 
 # Define the name of the latex output file for PDF builds
 latex:

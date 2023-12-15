@@ -1,6 +1,12 @@
-# Starting a new image analysis project
+# 🚩 Starting a new image analysis project
 
 If you have set up Python and installed Napari and Jupyter lab, you can start prototyping something for your image analysis project.
+
+It is likely that 
+
+- Opening one of your images in Python and viewing it
+
+## Create a project folder
 
 One of the first challenges you'll face is deciding how to organize the structure of your project. A simple way to get started would be as outlined below.
 
@@ -19,6 +25,8 @@ my_project/
 By keeping data close to your code, it's easier to refer to it via *relative paths* in your code.
 ```
 
+## Start a `Jupyter lab` server from your project folder
+
 Then, open your terminal and follow the steps below.
 
 1. From the command-line, navigate to the folder you just created using `cd`. For example:
@@ -35,6 +43,8 @@ jupyter lab
 ```
 
 Jupyter Lab will open in a web browser window. There, you can open your analysis notebook and start working on it.
+
+## Create a new `notebook`
 
 A good start would be to add a title for your analysis in a `Markdown` cell, import a few libraries, and load an image from your `data` subfolder.
 
@@ -57,14 +67,22 @@ viewer = napari.view_image(image)
 
 If you run these two cells, Napari should open in a separate window. You should be able to see your image in the viewer. From here, you're ready to start developing an image analysis pipeline based on your [project objectives](https://docs.google.com/document/d/1NUFKOpXunjs9hOxmn5RvLNrfcF0DhXfgoVGIL3-eXiA/).
 
-## Going further
+## Add a `README` file
 
-To complete the structure of your project, you can add, for example
+To complement the structure of your project, you can add, for example
 
 - a `README.md` file to document your project.
+
+## Add a `requirements.txt` file
+
 - a `requirements.txt` file to specify the Python dependencies for your project.
+
+## Add a `LICENSE` file
+
 - a `LICENSE` file to specify your project's license.
 
-Learn more about good practices coding projects by reading EPFL ENAC-IT's [Code Publishing Cheat Sheet](https://www.epfl.ch/schools/enac/wp-content/uploads/2022/06/ENAC-IT4R_Code_Publishing_Cheat_Sheet.pdf).
+Learn more about good practices in coding projects by reading EPFL ENAC-IT's [Code Publishing Cheat Sheet](https://www.epfl.ch/schools/enac/wp-content/uploads/2022/06/ENAC-IT4R_Code_Publishing_Cheat_Sheet.pdf).
+
+## Track your project with `git`
 
 In addition, you might consider tracking changes to your project using [`git`](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) for version control and hosting your project on a platform such as [GitHub](https://github.com/) or [GitLab](https://gitlab.com/). You can keep your project *private* or make it *public* to share it with others.
