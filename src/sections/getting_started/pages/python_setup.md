@@ -13,7 +13,7 @@ kernelspec:
 
 # 🐍 Setup for scientific image analysis using Python
 
-Python can be used to process, analyze, and visualize your images. There are several ways of installing and setting up Python on your computer. If you have never used Python before, we recommend that you follow the steps below to get your setup ready.
+Python can be used to process, analyze, and visualize your images. There are several ways of installing and setting up Python on your computer. If you have never used Python before, we recommend that you follow the steps below to get started.
 
 ## Install Python using `conda`
 
@@ -103,6 +103,7 @@ Many packages exist for image processing and analysis in Python. Some of them ar
 
 import pandas as pd
 from itables import init_notebook_mode
+from itables import show
 
 init_notebook_mode(all_interactive=True)
 
@@ -130,14 +131,24 @@ df = pd.DataFrame.from_dict({
     ]
 })
 
-df
+show(
+    df, 
+    classes="display compact", 
+    columnDefs=[
+        # {"width": "100%", "targets": [0]},
+        {"className": "dt-left", "targets": "_all"}
+    ],
+    style="width:100%;margin:auto",
+    paging=False,
+    showIndex=False,
+)
 ```
 
-The final choice of library to install will depend on your specific project. Nevertheless, to have something to work with, you can already run a `pip install scikit-image` in your virtual environment. Scikit-image will provide you with a useful collection of algorithms for image processing and analysis.
+The final choice of library to install will depend on your specific project. For now, you can run a `pip install scikit-image` in your virtual environment. Scikit-image will provide you with a useful collection of algorithms for image processing and analysis.
 
 **Napari**
 
-[Napari](https://www.napari.org/) is a multi-dimensional image viewer for Python. It is used to visualize scientific images and the data associated with them, such as segmentation masks, bounding boxes, and keypoints, for example.
+[Napari](https://www.napari.org/) is a multi-dimensional image viewer for Python. It is used to visualize scientific images and the data associated with them, including segmentation masks, bounding boxes, and keypoints.
 
 With Napari, you can
 
@@ -173,7 +184,7 @@ We recommend that you pick one of the code editors below.
 
 Setting up Python for working on your image analysis project typically involves the following steps.
 
-- Install `Python` and `conda` through `Miniconda`.
-- Set up a `virtual environment` with `conda` to isolate the Python packages you install from the rest of your system.
-- Install packages, such as `Jupyter lab`, `Scikit-image` and `Napari` in your `virtual environment` using `pip`.
-- Develop code either in `Jupyter lab` or in a dedicated `code editor`.
+- ✅ Install `Python` and `conda` through `Miniconda`.
+- ✅ Set up a `virtual environment` with `conda` to isolate the Python packages you install from the rest of your system.
+- ✅ Install packages, such as `Jupyter lab`, `Scikit-image` and `Napari` in your `virtual environment` using `pip`.
+- ✅ Develop code either in `Jupyter lab` or in a dedicated `code editor`.

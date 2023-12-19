@@ -6,7 +6,7 @@ root: README
 chapters:
 - file: sections/getting_started/README
   sections:
-  - file: sections/getting_started/pages/recipe_success
+  # - file: sections/getting_started/pages/recipe_success
   - file: sections/getting_started/pages/python_setup
   - file: sections/getting_started/pages/new_project
 - file: sections/starter_packs/README

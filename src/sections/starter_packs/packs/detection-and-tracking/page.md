@@ -24,10 +24,11 @@ Objects of interest can be detected via keypoints, bounding boxes, shapes (e.g. 
 import pandas as pd
 from itables import init_notebook_mode
 from itables import show
+from pathlib import Path
 
 init_notebook_mode(all_interactive=True)
 
-df = pd.read_csv('../../../exploring_further/online_resources/online_resources.csv')
+df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'online_resources.csv')
 
 df["Name"] = [
     '<a href="{}">{}</a>'.format(link, name)
@@ -39,7 +40,17 @@ df.drop('Link', axis='columns', inplace=True)
 mask = df['Keywords'].str.contains('|'.join(['Object detection', 'Tracking']), na=False)
 filtered_df = df[mask]
 
-show(filtered_df, classes="display compact", paging=False)
+show(
+    filtered_df,
+    classes="display compact", 
+    columnDefs=[
+        {"width": "100%", "targets": [0]},
+        {"className": "dt-left", "targets": [0]}
+    ],
+    style="width:100%;margin:auto",
+    paging=False,
+    showIndex=False,
+)
 ```
 
 ## 💡 Notebook case studies
@@ -47,10 +58,10 @@ show(filtered_df, classes="display compact", paging=False)
 ```{code-cell} ipython3
 :tags: [remove-input]
 
-df = pd.read_csv('../../../exploring_further/notebook_case_studies/notebook_case_studies.csv')
+df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'notebook_case_studies.csv')
 
 df["Title"] = [
-    '<a href="./{}">{}</a>'.format(link, name)
+    '<a href="../../../exploring_further/notebook_case_studies/{}">{}</a>'.format(link, name)
     for link, name in zip(df["Link"], df["Title"])
 ]
 
@@ -64,7 +75,16 @@ df = df[mask]
 
 df.drop(['Link', 'Keywords'], axis='columns', inplace=True)
 
-show(df, classes="display compact", paging=False)
+show(
+    df, 
+    classes="display compact", 
+    columnDefs=[
+        {"className": "dt-left", "targets": "_all"}
+    ],
+    style="width:100%;margin:auto",
+    paging=False,
+    showIndex=False,
+)
 ```
 
 ## 🛠️ Software tools
@@ -72,7 +92,7 @@ show(df, classes="display compact", paging=False)
 ```{code-cell} ipython3
 :tags: [remove-input]
 
-df = pd.read_csv('../../../exploring_further/software_tools/software_tools.csv')
+df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'software_tools.csv')
 
 df["Software tool"] = [
     '<a href="{}">{}</a>'.format(link, name)
@@ -84,5 +104,13 @@ df.drop(['Homepage', 'Tested and approved by the authors'], axis='columns', inpl
 mask = df['Used for'].str.contains('|'.join(['Object detection', 'Tracking']), na=False)
 filtered_df = df[mask]
 
-show(filtered_df, classes="display compact", paging=False)
+show(
+    filtered_df,
+    classes="display compact", 
+    columnDefs=[
+        {"className": "dt-left", "targets": "_all"}
+    ],
+    paging=False,
+    showIndex=False,
+)
 ```

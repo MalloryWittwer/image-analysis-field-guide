@@ -12,7 +12,7 @@ kernelspec:
 ---
 # 🌐 Online resources
 
-Browse our list of resources available for free on the web on the topic of scientific image analysis.
+Browse our curated list of online resources on the topic of scientific image analysis.
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -20,10 +20,11 @@ Browse our list of resources available for free on the web on the topic of scien
 import pandas as pd
 from itables import init_notebook_mode
 from itables import show
+from pathlib import Path
 
 init_notebook_mode(all_interactive=True)
 
-df = pd.read_csv('online_resources.csv')
+df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'online_resources.csv')
 
 df["Name"] = [
     '<a href="{}">{}</a>'.format(link, name)

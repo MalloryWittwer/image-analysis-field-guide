@@ -13,7 +13,7 @@ kernelspec:
 
 # 🛠️ Software tools
 
-Browse our list of software tools available for free on the web on the topic of scientific image analysis.
+Browse our curated list of software tools on the topic of scientific image analysis.
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -21,10 +21,11 @@ Browse our list of software tools available for free on the web on the topic of 
 import pandas as pd
 from itables import init_notebook_mode
 from itables import show
+from pathlib import Path
 
 init_notebook_mode(all_interactive=True)
 
-df = pd.read_csv('software_tools.csv')
+df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'software_tools.csv')
 
 df["Software tool"] = [
     '<a href="{}">{}</a>'.format(link, name)

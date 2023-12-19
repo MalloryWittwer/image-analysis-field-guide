@@ -12,7 +12,7 @@ kernelspec:
 ---
 # 💡 Notebook case studies
 
-Browse our collection of Jupyter notebook examples involving scientific image processing and analysis in Python.
+Browse our collection of Jupyter notebooks to learn more about scientific image processing and analysis in Python.
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -20,10 +20,11 @@ Browse our collection of Jupyter notebook examples involving scientific image pr
 import pandas as pd
 from itables import init_notebook_mode
 from itables import show
+from pathlib import Path
 
 init_notebook_mode(all_interactive=True)
 
-df = pd.read_csv('./notebook_case_studies.csv')
+df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'notebook_case_studies.csv')
 
 df["Title"] = [
     '<a href="./{}">{}</a>'.format(link, name)
