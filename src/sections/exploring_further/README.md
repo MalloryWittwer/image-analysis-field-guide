@@ -4,4 +4,4 @@ Browse our collections of online resources, jupyter notebooks, and software tool
 
 - [🌐 Online resources](./online_resources/page.md)
 - [💡 Notebooks case studies](./notebook_case_studies/page.md)
-- [🛠️ Software tools database](./software_tools/page.md)
+- [🛠️ Software tools](./software_tools/page.md)

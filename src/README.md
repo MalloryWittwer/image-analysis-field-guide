@@ -64,7 +64,7 @@ Browse our collections of online resources, python examples, and software tools 
 
 - [🌐 Online resources](./sections/exploring_further/online_resources/page.md)
 - [💡 Notebooks case studies](./sections/exploring_further/notebook_case_studies/page.md)
-- [🛠️ Software tools database](./sections/exploring_further/software_tools/page.md)
+- [🛠️ Software tools](./sections/exploring_further/software_tools/page.md)
 
 ## 🧑‍🤝‍🧑 Join the community
 

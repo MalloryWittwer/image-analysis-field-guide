@@ -18,7 +18,7 @@ A good starting point:
 
 ```{admonition} Look for existing tools that might help
 :class: tip
-There is no point reinventing the wheel! Search for software, libraries, or plugins that could help you solve your image analysis problem in our curated list: [Software tools database](https://www.notion.so/Software-tools-af90da3522de4a34bc5246cc59c7efbf?pvs=21).
+There is no point reinventing the wheel! Search for software, libraries, or plugins that could help you solve your image analysis problem in our curated list: [Software tools](https://www.notion.so/Software-tools-af90da3522de4a34bc5246cc59c7efbf?pvs=21).
 ```
 
 ```{admonition} Identify the simplest possible approach that might work and try it first
