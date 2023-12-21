@@ -27,7 +27,7 @@ init_notebook_mode(all_interactive=True, connected=True)
 df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'notebook_case_studies.csv')
 
 df["Title"] = [
-    '<a href="./{}">{}</a>'.format(link, name)
+    '<a href="./notebooks/{}">{}</a>'.format(link, name)
     for link, name in zip(df["Link"], df["Title"])
 ]
 
