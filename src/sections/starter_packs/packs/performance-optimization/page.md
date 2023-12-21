@@ -26,7 +26,7 @@ from itables import init_notebook_mode
 from itables import show
 from pathlib import Path
 
-init_notebook_mode(all_interactive=True)
+init_notebook_mode(all_interactive=True, connected=True)
 
 df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'online_resources.csv')
 
@@ -35,9 +35,8 @@ df["Name"] = [
     for link, name in zip(df["Link"], df["Name"])
 ]
 
-df.drop('Link', axis='columns', inplace=True)
-
-filtered_df = df[df['Keywords'].str.contains('Optimization', na=False)]
+filtered_df = df[df['Keywords'].str.contains('Optimization', na=False)].copy()
+filtered_df.drop(['Link', 'Keywords'], axis='columns', inplace=True)
 
 show(
     filtered_df,
@@ -49,6 +48,7 @@ show(
     style="width:100%;margin:auto",
     paging=False,
     showIndex=False,
+    dom="tr"
 )
 ```
 
@@ -65,12 +65,12 @@ df["Title"] = [
 ]
 
 df["Image"] = [
-    '<img src="../../../../_images/{}" alt="Image" width="500">'.format(image)
+    '<img src="../../../../_images/{}" alt="Image" width="300">'.format(image)
     for image in df["Image"]
 ]
 
-df = df[df['Keywords'].str.contains('Optimization', na=False)]
-df.drop(['Link', 'Keywords'], axis='columns', inplace=True)
+df = df[df['Keywords'].str.contains('Optimization', na=False)].copy()
+df.drop(['Link', 'Keywords', 'Description'], axis='columns', inplace=True)
 
 show(
     df, 
@@ -81,6 +81,7 @@ show(
     style="width:100%;margin:auto",
     paging=False,
     showIndex=False,
+    dom="tr"
 )
 ```
 
@@ -96,9 +97,20 @@ df["Software tool"] = [
     for link, name in zip(df["Homepage"], df["Software tool"])
 ]
 
-df.drop(['Homepage', 'Tested and approved by the authors'], axis='columns', inplace=True)
+df["Technology"] = [
+    ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in str(keywords).split(', ')])
+    for keywords in df["Technology"]
+]
 
-filtered_df = df[df['Used for'].str.contains('Optimization', na=False)]
+df["Keywords"] = [
+    ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in str(keywords).split(', ')])
+    for keywords in df["Keywords"]
+] + df["Technology"]
+
+df.drop('Technology', axis='columns', inplace=True)
+
+filtered_df = df[df['Used for'].str.contains('Optimization', na=False)].copy()
+filtered_df.drop(['Homepage', 'Tested and approved by the authors', 'Used for'], axis='columns', inplace=True)
 
 show(
     filtered_df,
@@ -106,6 +118,7 @@ show(
     columnDefs=[
         {"className": "dt-left", "targets": "_all"}
     ],
+    style="width:100%;margin:auto",
     paging=False,
     showIndex=False,
 )

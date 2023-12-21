@@ -22,7 +22,7 @@ from itables import init_notebook_mode
 from itables import show
 from pathlib import Path
 
-init_notebook_mode(all_interactive=True)
+init_notebook_mode(all_interactive=True, connected=True)
 
 df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'notebook_case_studies.csv')
 
@@ -38,5 +38,13 @@ df["Image"] = [
 
 df.drop(['Link', 'Keywords'], axis='columns', inplace=True)
 
-show(df, classes="display compact", paging=False)
+show(
+    df,
+    classes="display compact", 
+    columnDefs=[
+        {"className": "dt-left", "targets": [0, 1]}
+    ],
+    paging=False,
+    showIndex=False,
+)
 ```

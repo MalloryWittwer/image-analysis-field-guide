@@ -3,7 +3,7 @@
 
 title: The Image Analysis Field Guide
 author: EPFL Center for Imaging
-logo: "src/icon.png"
+logo: "icon.png"
 copyright: "2024"
 only_build_toc_files: true
 
@@ -36,7 +36,7 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  favicon: "src/logo.ico"
+  favicon: "logo.ico"
   use_issues_button: false
   use_repository_button: true
 

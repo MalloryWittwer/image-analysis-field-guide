@@ -105,7 +105,7 @@ import pandas as pd
 from itables import init_notebook_mode
 from itables import show
 
-init_notebook_mode(all_interactive=True)
+init_notebook_mode(all_interactive=True, connected=True)
 
 df = pd.DataFrame.from_dict({
     'Package': [

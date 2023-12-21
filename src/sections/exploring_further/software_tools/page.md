@@ -23,7 +23,7 @@ from itables import init_notebook_mode
 from itables import show
 from pathlib import Path
 
-init_notebook_mode(all_interactive=True)
+init_notebook_mode(all_interactive=True, connected=True)
 
 df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'software_tools.csv')
 
@@ -34,5 +34,31 @@ df["Software tool"] = [
 
 df.drop(['Homepage', 'Tested and approved by the authors'], axis='columns', inplace=True)
 
-show(df, classes="display compact", paging=False)
+df["Used for"] = [
+    ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in str(keywords).split(', ')])
+    for keywords in df["Used for"]
+]
+
+df["Technology"] = [
+    ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in str(keywords).split(', ')])
+    for keywords in df["Technology"]
+]
+
+df["Keywords"] = [
+    ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in str(keywords).split(', ')])
+    for keywords in df["Keywords"]
+] + df["Technology"]
+
+df.drop('Technology', axis='columns', inplace=True)
+
+show(
+    df,
+    classes="display compact", 
+    columnDefs=[
+        {"className": "dt-left", "targets": "_all"}
+    ],
+    style="width:100%;margin:auto",
+    paging=False,
+    showIndex=False,
+)
 ```
