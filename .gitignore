@@ -163,7 +163,7 @@ old/
 src/_build/
 src/data/
 inkscape/
-notebooks/
+experiments/
 raw/
 lab/
 src/sections/exploring_further/notebook_case_studies/data/

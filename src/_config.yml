@@ -12,11 +12,11 @@ launch_buttons:
   jupyterhub_url: "http://frank1/"  # The URL for your JupyterHub.
 
 execute:
-  execute_notebooks: "cache"
-  # execute_notebooks: "auto"
+  # execute_notebooks: "cache"
+  execute_notebooks: "auto"
   # execute_notebooks: "off"
-  exclude_patterns:
-    - '*.ipynb'
+  # exclude_patterns:
+  #   - '*.ipynb'
 
 # Define the name of the latex output file for PDF builds
 latex:
