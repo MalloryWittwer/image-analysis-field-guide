@@ -22,11 +22,11 @@ chapters:
   - file: sections/exploring_further/online_resources/page
   - file: sections/exploring_further/notebook_case_studies/page
     sections:
-    - file: sections/exploring_further/notebook_case_studies/segmentation_3d.ipynb
-    - file: sections/exploring_further/notebook_case_studies/tracking_2d.ipynb
-    - file: sections/exploring_further/notebook_case_studies/nuclei_stardist.ipynb
-    - file: sections/exploring_further/notebook_case_studies/lungs_segmentation_ct.ipynb
-    - file: sections/exploring_further/notebook_case_studies/skeletonization.ipynb
-    - file: sections/exploring_further/notebook_case_studies/image_correlation.ipynb
-    - file: sections/exploring_further/notebook_case_studies/crystallites_annotation.ipynb
+    - file: sections/exploring_further/notebook_case_studies/notebooks/segmentation_3d.ipynb
+    - file: sections/exploring_further/notebook_case_studies/notebooks/tracking_2d.ipynb
+    - file: sections/exploring_further/notebook_case_studies/notebooks/nuclei_stardist.ipynb
+    - file: sections/exploring_further/notebook_case_studies/notebooks/lungs_segmentation_ct.ipynb
+    - file: sections/exploring_further/notebook_case_studies/notebooks/skeletonization.ipynb
+    - file: sections/exploring_further/notebook_case_studies/notebooks/image_correlation.ipynb
+    - file: sections/exploring_further/notebook_case_studies/notebooks/crystallites_annotation.ipynb
   - file: sections/exploring_further/software_tools/page

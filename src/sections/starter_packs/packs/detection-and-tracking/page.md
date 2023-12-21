@@ -61,7 +61,7 @@ show(
 df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'notebook_case_studies.csv')
 
 df["Title"] = [
-    '<a href="../../../exploring_further/notebook_case_studies/{}">{}</a>'.format(link, name)
+    '<a href="../../../exploring_further/notebook_case_studies/notebooks/{}">{}</a>'.format(link, name)
     for link, name in zip(df["Link"], df["Title"])
 ]
 
