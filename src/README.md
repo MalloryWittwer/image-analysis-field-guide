@@ -10,7 +10,7 @@ Welcome! Use this field guide to quickly find the information you need to tackle
 
 New to image analysis? These short guides will help you start off on the right foot.
 
-- [🐍 Setup for scientific image analysis using Python](./sections/getting_started/pages/python_setup.md)
+- [🐍 Setting up Python for scientific image analysis](./sections/getting_started/pages/python_setup.md)
 - [🚩 Starting a new image analysis project](./sections/getting_started/pages/new_project.md)
 
 ## 🚀 Starter packs

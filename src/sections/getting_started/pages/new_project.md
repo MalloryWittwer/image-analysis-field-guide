@@ -120,7 +120,7 @@ If you change your project's structure along the way, you may have to adjust the
 
 ## Add a `README` file
 
-The `README.md` file is usually written in [Markdown](https://www.markdownguide.org/cheat-sheet/) format. It represents the entry point of your project. If you decide to host your code on GitLab or GitHub, the `README` file will get rendered on your project's page.
+The `README.md` file is usually written in [Markdown](https://www.markdownguide.org/cheat-sheet/) format. It is the landing page of your project. If you decide to host your code on GitLab or GitHub, the `README` file will get rendered on your project's page.
 
 Useful information to include in the `README` include:
 
@@ -129,6 +129,8 @@ Useful information to include in the `README` include:
 - Usage instructions
 - A description of your project's structure
 - How to cite your project
+
+For more information, see [Landing Page - README File (The Turing Way)](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme).
 
 ## Add a `requirements.txt` file
 
@@ -182,3 +184,9 @@ Using a consistent project structure like this one makes it easier for you to sh
 <!-- You might consider tracking your project using [`git`](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) and hosting it on a platform such as [GitHub](https://github.com/) or [GitLab](https://gitlab.com/). You can keep your project *private* or make it *public* to share it with others. -->
 
 From here, you should be ready to start developing image analysis pipelines for your project. To help you refine your objectives, consider filling in one of our [Image Analysis Project Sheets](https://docs.google.com/document/d/1NUFKOpXunjs9hOxmn5RvLNrfcF0DhXfgoVGIL3-eXiA/).
+
+A few more resources:
+
+- [Naming files, folders and other things (The Turing Way)](https://the-turing-way.netlify.app/project-design/filenaming)
+- [Getting Started Checklist (The Turing Way)](https://the-turing-way.netlify.app/project-design/pd-checklist)
+- [Getting Started With GitHub (The Turing Way)](https://the-turing-way.netlify.app/collaboration/github-novice)

@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# 🐍 Setup for scientific image analysis using Python
+# 🐍 Setting up Python for scientific image analysis
 
 Python can be used to process, analyze, and visualize your images. There are several ways of installing and setting up Python on your computer. If you have never used Python before, we recommend that you follow the steps below to get started.
 
@@ -21,30 +21,29 @@ If you haven't yet installed Python, Anaconda, or Miniconda on your machine, we 
 
 **Miniconda**: https://docs.conda.io/en/latest/miniconda.html
 
-Once you have downloaded the installer, run it to install Python.
+Once you have downloaded the installer, run it to install `conda`.
 
 `````{tab-set}
-```{tab-item} Windows
+````{tab-item} Windows
 1. Run the executable file you just downloaded (`Miniforge3-Windows-x86_64.exe`) and follow the instructions.
 2. Launch the *Anaconda Prompt* terminal from the start menu.
+```{image} ../../../images/anaconda_prompt.png
+:align: center
+:width: 250px
 ```
+````
 ````{tab-item} Mac / Linux
 1. Open your Terminal (you can search for it in spotlight - `cmd` + `space`)
 2. Navigate to the folder you downloaded the installer to using `cd`. For example:
-
 ```bash
 cd ~/Downloads
 ```
-
 1. Execute the installer with the command below. You can use your arrow keys to scroll up and down to read it/agree to it.
-
 ```bash
 bash Miniforge3-MacOSX-x86_64.sh -b
 ```
-
 2. To verify that your installation worked, close your terminal window and open a new one. You should see `(base)` to the left of your prompt.
 3. Finally, initialize miniforge with the command below. This ensures that your terminal is set up correctly for your Python installation.
-
 ```bash
 conda init
 ```
@@ -69,12 +68,12 @@ conda create -n project-env python=3.9
 The `-n` parameter specifies the name of the virtual environment (here, *project-env*). We also specify the Python version to be 3.9. Python is constantly evolving and new versions are regularly released. At the time of writing, modern versions include 3.8 to 3.11.
 
 ```{tip}
-You can print a list of the virtual environments available on your machine by typing `conda env list`.
+Print a list of the virtual environments available on your machine by typing `conda env list`.
 ```
 
 ## Install packages
 
-Let’s install a few Python packages into your *project-env* environment. To do that, you first have to *activate* the environment.
+Let’s install a few Python packages into your *project-env* environment. To do that, you first have to *activate* the environment. Use the following command:
 
 ```bash
 conda activate project-env
@@ -84,19 +83,25 @@ If you successfully activated the environment, you should see `(project-env)` to
 
 **Jupyter lab**
 
-[Jupyter lab](https://jupyter.org/) is a web appliation that you can use to edit and execute Python code. Install it in your environment using the [pip](https://pip.pypa.io/en/stable/) package manager by typing the following command:
+[Jupyter lab](https://jupyter.org/) is a web appliation that you can use to edit and execute Python code. You can install it in your environment using the [pip](https://pip.pypa.io/en/stable/) package manager. Type the following command:
 
 ```bash
 pip install jupyterlab
 ```
 
-```{admonition} Check your installation
+The `pip` program is included with Python. It searches for and lets you install packages from the official Python Package Index, also known as [PyPI](https://pypi.org/). 
+
+````{admonition} Check your installation
 Type `jupyter lab` in your terminal. This should start the Jupyter lab application you just installed in your web browser. To stop Jupyter lab, close the web browser and press `Ctrl+C` in your terminal window.
+
+```{image} ../../../images/jlab-3.gif
+:align: center
 ```
+````
 
 **Image analysis packages**
 
-Many packages exist for image processing and analysis in Python. Some of them are listed below.
+Many packages are available for image processing and analysis in Python. For example:
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -131,6 +136,11 @@ df = pd.DataFrame.from_dict({
     ]
 })
 
+df["Install command"] = [
+    '<code class="docutils literal notranslate"><span class="pre">{}</span></code>'.format(name)
+    for name in df["Install command"]
+]
+
 show(
     df, 
     classes="display compact", 
@@ -144,7 +154,7 @@ show(
 )
 ```
 
-The final choice of library to install will depend on your specific project. For now, you can run a `pip install scikit-image` in your virtual environment. Scikit-image will provide you with a useful collection of algorithms for image processing and analysis.
+The choice of library to install depends on your specific project. For now, you can run a `pip install scikit-image` in your virtual environment. Scikit-image will provide you with a useful collection of algorithms for image processing and analysis.
 
 **Napari**
 
@@ -164,9 +174,12 @@ Install [Napari](https://napari.org/stable/) by typing the following command:
 pip install "napari[all]"
 ```
 
-```{admonition} Check your installation
+````{admonition} Check your installation
 With your virtual environment activated, type `napari` in your terminal. The Napari viewer should open **in a separate window**.
+```{image} ../../../images/napari_terminal.gif
+:align: center
 ```
+````
 
 You can also find the official Napari installation instructions [here](https://napari.org/stable/tutorials/fundamentals/installation.html#installation).
 
@@ -176,15 +189,32 @@ Code editors provide many useful features, including syntax highlighting, a file
 
 We recommend that you pick one of the code editors below.
 
-- [**Visual Studio Code**](https://code.visualstudio.com/) is a generalist, lightweight, and extensible editor. Use it with the Python and Jupyter extensions to easily select virtual environments and run Jupyter notebooks.
-- [**Pycharm**](https://www.jetbrains.com/pycharm/) is a powerful and complete IDE for Python, ideal for managing big Python projects.
-- [**Spyder**](https://www.spyder-ide.org/) is designed for scientific Python development. The interface lets you visualize current variables and figures in dedicated pannels.
+````{grid} 1 1 2 3
+```{grid-item-card}
+:link: https://code.visualstudio.com/
+:img-top: https://static-00.iconduck.com/assets.00/file-type-vscode-icon-256x254-n2qz4hp8.png
+:text-align: center
+Visual Studio Code
+```
+```{grid-item-card}
+:link: ./sections/starter_packs/packs/image-data-visualization/page.html
+:img-top: https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg
+:text-align: center
+PyCharm
+```
+```{grid-item-card}
+:link: ./sections/starter_packs/packs/performance-optimization/page.html
+:img-top: https://static-00.iconduck.com/assets.00/spyder-icon-512x512-0mcgxvrr.png
+:text-align: center
+Spyder
+```
+````
 
 ## Summary
 
 Setting up Python for working on your image analysis project typically involves the following steps.
 
-- ✅ Install `Python` and `conda` through `Miniconda`.
-- ✅ Set up a `virtual environment` with `conda` to isolate the Python packages you install from the rest of your system.
-- ✅ Install packages, such as `Jupyter lab`, `Scikit-image` and `Napari` in your `virtual environment` using `pip`.
-- ✅ Develop code either in `Jupyter lab` or in a dedicated `code editor`.
+- Install Python and *conda* through **Miniconda**.
+- Set up a **virtual environment** to isolate the Python packages you install from the rest of your system.
+- Install packages, such as **Jupyter lab**, **Scikit-image** and **Napari** in your virtual environment using *pip*.
+- Develop code either in Jupyter lab or in a dedicated **code editor**.
