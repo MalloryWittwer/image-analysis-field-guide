@@ -48,10 +48,12 @@ def filter_online_resources(tags: List[str]):
     df["Name"] = [
         '<a href="{}">{}</a>'.format(link, name)
         for link, name in zip(df["Link"], df["Name"])
-    ]   
+    ]
 
     mask = df['Keywords'].str.contains('|'.join(tags), na=False)
     filtered_df = df[mask].copy()
+
+
     filtered_df.drop(['Link', 'Keywords'], axis='columns', inplace=True)
 
     return filtered_df
@@ -86,12 +88,12 @@ def filter_software_tools(tags: List[str]):
     ]
 
     df["Technology"] = [
-        ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in str(keywords).split(', ')])
+        ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in [kw for kw in str(keywords).split(', ') if kw != 'nan']])
         for keywords in df["Technology"]
     ]
 
     df["Keywords"] = [
-        ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in str(keywords).split(', ')])
+        ''.join(['<button class="btn btn-light btn-xs" onclick="insertText(this)" style="padding: 1px; margin: 4px 2px; font-size: 12px;">{}</button>'.format(keyword) for keyword in [kw for kw in str(keywords).split(', ') if kw != 'nan']])
         for keywords in df["Keywords"]
     ] + df["Technology"]
 

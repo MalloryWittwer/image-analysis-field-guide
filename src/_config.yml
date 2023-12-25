@@ -39,6 +39,8 @@ html:
   favicon: "logo.ico"
   use_issues_button: false
   use_repository_button: true
+  comments:
+    hypothesis: true
 
 sphinx:
   config:
