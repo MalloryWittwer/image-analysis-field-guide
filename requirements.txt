@@ -11,3 +11,4 @@ skan
 trackpy
 seaborn
 spam
+python-dotenv
