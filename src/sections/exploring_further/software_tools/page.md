@@ -25,7 +25,11 @@ from pathlib import Path
 
 init_notebook_mode(all_interactive=True, connected=True)
 
-df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'software_tools.csv')
+import sys
+sys.path.append(str(Path.cwd().parents[2]))
+from helpers import DATAFRAME_SOFTWARE_TOOLS
+df = DATAFRAME_SOFTWARE_TOOLS.copy()
+# df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'software_tools.csv')
 
 df["Software tool"] = [
     '<a href="{}">{}</a>'.format(link, name)

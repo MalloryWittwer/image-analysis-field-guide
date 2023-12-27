@@ -24,7 +24,11 @@ from pathlib import Path
 
 init_notebook_mode(all_interactive=True, connected=True)
 
-df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'online_resources.csv')
+import sys
+sys.path.append(str(Path.cwd().parents[2]))
+from helpers import DATAFRAME_ONLINE_RESOURCES
+df = DATAFRAME_ONLINE_RESOURCES.copy()
+# df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'online_resources.csv')
 
 df["Name"] = [
     '<a href="{}">{}</a>'.format(link, name)

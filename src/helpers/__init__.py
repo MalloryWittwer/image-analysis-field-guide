@@ -4,6 +4,13 @@ from itables import show
 from functools import partial
 from typing import List
 
+from dotenv import load_dotenv
+load_dotenv()
+
+from helpers.notion_api import get_online_resources_dataframe, get_software_tools_dataframe
+
+DATAFRAME_ONLINE_RESOURCES = get_online_resources_dataframe()
+DATAFRAME_SOFTWARE_TOOLS = get_software_tools_dataframe()
 
 show_online_resources = partial(
     show,
@@ -43,7 +50,8 @@ show_software_tools = partial(
 
 
 def filter_online_resources(tags: List[str]):
-    df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'online_resources.csv')
+    # df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'online_resources.csv')
+    df = DATAFRAME_ONLINE_RESOURCES.copy()
 
     df["Name"] = [
         '<a href="{}">{}</a>'.format(link, name)
@@ -59,11 +67,15 @@ def filter_online_resources(tags: List[str]):
     return filtered_df
 
 
+def minimize(input_string: str):
+    return '-'.join(input_string.lower().split())
+
+
 def filter_notebook_case_studies(tags: List[str]):
     df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'notebook_case_studies.csv')
 
     df["Title"] = [
-        '<a href="../../../exploring_further/notebook_case_studies/notebooks/{}">{}</a>'.format(link, name)
+        '<a href="../../../exploring_further/notebook_case_studies/notebooks/{}#{}">{}</a>'.format(link, minimize(tags[0]), name)
         for link, name in zip(df["Link"], df["Title"])
     ]
 
@@ -80,7 +92,8 @@ def filter_notebook_case_studies(tags: List[str]):
 
 
 def filter_software_tools(tags: List[str]):
-    df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'software_tools.csv')
+    # df = pd.read_csv(Path.cwd().parents[4] / 'db' / 'software_tools.csv')
+    df = DATAFRAME_SOFTWARE_TOOLS.copy()
 
     df["Software tool"] = [
         '<a href="{}">{}</a>'.format(link, name)
@@ -105,3 +118,7 @@ def filter_software_tools(tags: List[str]):
     filtered_df.drop(['Homepage', 'Tested and approved by the authors', 'Used for'], axis='columns', inplace=True)
 
     return filtered_df
+
+if __name__ == '__main__':
+    print(DATAFRAME_SOFTWARE_TOOLS.head())
+    print(DATAFRAME_ONLINE_RESOURCES.head())
