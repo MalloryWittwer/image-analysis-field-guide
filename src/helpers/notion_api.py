@@ -79,7 +79,7 @@ def query_notion_database(database_id: str) -> dict:
         url=f"https://api.notion.com/v1/databases/{database_id}/query",
         headers={
             "Notion-Version": "2022-06-28",
-            "Authorization": f"Bearer {os.getenv('NOTION_KEY')}",
+            "Authorization": f"Bearer {os.environ('NOTION_KEY')}",
             "Content-Type": "application/json"
         },
     )
