@@ -16,6 +16,11 @@ kernelspec:
 
 Image segmentation aims to produce a segmentation mask that identifies a particular class or object. Image segmentation can be approached by classical techniques such as thresholding, weakly supervised learning, or deep learning.
 
+```{code-cell} ipython3
+:tags: [remove-input]
+tags = ["Image segmentation"]
+```
+
 ## 🌐 Online resources
 
 ```{code-cell} ipython3
@@ -28,8 +33,6 @@ sys.path.append(str(Path.cwd().parents[3]))
 from helpers import *
 
 init_notebook_mode(all_interactive=True, connected=True)
-
-tags = ["Image segmentation"]
 
 df = filter_online_resources(tags)
 show_online_resources(df)

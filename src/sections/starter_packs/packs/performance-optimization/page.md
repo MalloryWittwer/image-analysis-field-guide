@@ -16,6 +16,11 @@ kernelspec:
 
 Once an image analysis pipeline is working, it may be time to think about  making it run faster.
 
+```{code-cell} ipython3
+:tags: [remove-input]
+tags = ["Optimization"]
+```
+
 ## 🌐 Online resources
 
 ```{code-cell} ipython3
@@ -28,8 +33,6 @@ sys.path.append(str(Path.cwd().parents[3]))
 from helpers import *
 
 init_notebook_mode(all_interactive=True, connected=True)
-
-tags = ["Optimization"]
 
 df = filter_online_resources(tags)
 show_online_resources(df)

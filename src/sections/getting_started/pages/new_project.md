@@ -111,7 +111,7 @@ Once again, you should see a Napari viewer appear with your image loaded in it.
 
 As your project develops, you will probably have to create multiple `scripts` and `notebooks` to take care of different parts of your analysis. To keep things tidy, it might be useful to
 
-- Create a `/scripts` folder for your Python scripts (and move your scripts there)
+- Create a `/scripts` folder for your Python scripts (and move your scripts in there)
 - Create a `/notebooks` folder for your notebooks
 
 ```{note}
@@ -185,7 +185,12 @@ Using a consistent project structure like this one makes it easier for you to sh
 
 From here, you should be ready to start developing image analysis pipelines for your project. To help you refine your objectives, consider filling in one of our [Image Analysis Project Sheets](https://docs.google.com/document/d/1NUFKOpXunjs9hOxmn5RvLNrfcF0DhXfgoVGIL3-eXiA/).
 
-A few more resources from [The Turing Way](https://the-turing-way.netlify.app/index.html):
+<div class="video-container google-sheet">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vRqDYDopKloJNX2_5tZaTwLABLniCXEVkgBqBTSha___x2j8xKvRGWNofyGxoSQzZmyccVRgYHL8n92/pub?embedded=true"></iframe>
+</div>
+
+---
+Finally, if you want to dive deeper here are a few more resources from [The Turing Way](https://the-turing-way.netlify.app/index.html):
 
 - [Naming files, folders and other things](https://the-turing-way.netlify.app/project-design/filenaming)
 - [Getting Started Checklist](https://the-turing-way.netlify.app/project-design/pd-checklist)

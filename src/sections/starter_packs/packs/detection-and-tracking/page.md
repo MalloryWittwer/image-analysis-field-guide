@@ -16,6 +16,11 @@ kernelspec:
 
 Objects of interest can be detected via keypoints, bounding boxes, shapes (e.g. lines, circles), or segmentation masks. In timeseries (movies), following objects across frames is known as tracking.
 
+```{code-cell} ipython3
+:tags: [remove-input]
+tags = ["Object detection", "Tracking"]
+```
+
 ## 🌐 Online resources
 
 ```{code-cell} ipython3
@@ -28,8 +33,6 @@ sys.path.append(str(Path.cwd().parents[3]))
 from helpers import *
 
 init_notebook_mode(all_interactive=True, connected=True)
-
-tags = ["Object detection", "Tracking"]
 
 df = filter_online_resources(tags)
 show_online_resources(df)

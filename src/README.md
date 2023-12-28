@@ -73,13 +73,19 @@ Browse our collections of online resources, python examples, and software tools 
 
 ## 🧑‍🤝‍🧑 Join the community
 
-Join our *Matrix server* by connecting to [element.epfl.ch](https://element.epfl.ch/#/room/#image_analysis_hub-launchpad:epfl.ch).
+**Global**
+- Soon!
+
+**EPFL**
+- Join our *Matrix server* by connecting to [element.epfl.ch](https://element.epfl.ch/#/room/#image_analysis_hub-launchpad:epfl.ch).
 
 ## 🤝 Contribute
 
 Send an email to imaging@epfl.ch if you’d like to contribute to this material. We’d be happy to receive your suggestions and to know more about the topics you are interested in!
 
-## 🗨️ Comment
+You can also check out our [Contributor's guide](https://github.com/MalloryWittwer/image-analysis-field-guide/blob/main/contribute.md).
+
+## 🗨️ Add comments
 
 ```{tip}
 You can add comments to any page of this book; check-out the `<` button in the upper-right corner of this page!

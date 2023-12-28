@@ -16,6 +16,11 @@ kernelspec:
 
 Image registration can be used to align multiple images onto one another, to stabilize a sequence of images by compensating camera movement, to track the movement and deformation of objects, and for image stitching of multiple fields of view, for example.
 
+```{code-cell} ipython3
+:tags: [remove-input]
+tags = ["Image registration"]
+```
+
 ## 🌐 Online resources
 
 ```{code-cell} ipython3
@@ -28,8 +33,6 @@ sys.path.append(str(Path.cwd().parents[3]))
 from helpers import *
 
 init_notebook_mode(all_interactive=True, connected=True)
-
-tags = ["Image registration"]
 
 df = filter_online_resources(tags)
 show_online_resources(df)

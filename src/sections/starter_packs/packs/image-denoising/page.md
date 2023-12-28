@@ -14,7 +14,12 @@ kernelspec:
 
 # 🪄 Image denoising
 
-Image denoising is used to generate images with high visual quality, in which structures are easily distinguishable, and noisy pixels are removed. Denoised images are often more amendable to thresholding for [segmentation](../image-segmentation/page.md).
+Image denoising is used to generate images with high visual quality, in which structures are easily distinguishable, and noisy pixels are removed. Denoised images are often more amendable to thresholding for segmentation.
+
+```{code-cell} ipython3
+:tags: [remove-input]
+tags = ["Image denoising"]
+```
 
 ## 🌐 Online resources
 
@@ -28,8 +33,6 @@ sys.path.append(str(Path.cwd().parents[3]))
 from helpers import *
 
 init_notebook_mode(all_interactive=True, connected=True)
-
-tags = ["Image denoising"]
 
 df = filter_online_resources(tags)
 show_online_resources(df)

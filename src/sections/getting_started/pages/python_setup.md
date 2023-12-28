@@ -55,7 +55,7 @@ conda init
 Verify that you have **conda** installed by typing `conda -V` in your terminal. This should print out a version number.
 ```
 
-## Set up a Python virtual environment
+## Create a Python virtual environment
 
 A virtual environments lets you isolate the packages and dependencies that you need for a specific project. Using virtual environments will ensure that these dependencies do not create conflicts between the different Python projects you may be working on.
 
@@ -71,7 +71,7 @@ The `-n` parameter specifies the name of the virtual environment (here, *project
 Print a list of the virtual environments available on your machine by typing `conda env list`.
 ```
 
-## Install packages
+## Activate your environment
 
 Let’s install a few Python packages into your *project-env* environment. To do that, you first have to *activate* the environment. Use the following command:
 
@@ -79,84 +79,65 @@ Let’s install a few Python packages into your *project-env* environment. To do
 conda activate project-env
 ```
 
-If you successfully activated the environment, you should see `(project-env)` to the left of your command prompt.
+If you successfully activated the environment, you should see `(project-env)` to the left of your command prompt. If you *deactivate* your environment and switch back to the `(base)` environment, you can use the `conda deactivate` command.
 
-**Jupyter lab**
+## Install packages
 
-[Jupyter lab](https://jupyter.org/) is a web appliation that you can use to edit and execute Python code. You can install it in your environment using the [pip](https://pip.pypa.io/en/stable/) package manager. Type the following command:
+Once you have activated your environment, you can install packages in it. Packages provide useful functionalities. Many packages are available for scientific computing, image processing and analysis in Python. Have a look at the projects below, which are all installable as Python packages.
+
+````{grid} 1 1 2 3
+```{grid-item-card}
+:link: https://scikit-image.org/
+:img-top: https://img.stackshare.io/service/1294/897180.png
+:text-align: center
+Scikit-image
+```
+```{grid-item-card}
+:link: https://opencv.org/
+:img-top: https://research.shu.ac.uk/aces/guardians/opencv_logo.png
+:text-align: center
+OpenCV
+```
+```{grid-item-card}
+:link: https://scipy.org/
+:img-top: https://scipy.org/images/logo.svg
+:text-align: center
+Scipy
+```
+````
+
+You can install packages using your terminal and a **package manager** program. By default, Python includes a package manager called `pip` which lets you install packages from the official Python Package Index, also known as [PyPI](https://pypi.org/).
+
+Let's install Scikit-image in your virtual environment. The collection of algorithms and tools that this library provides will certainly be useful!
+
+Type the following command in your terminal:
+
+```
+pip install scikit-image
+```
+
+To check that your installation was successful, you can type `pip list` in your terminal to list all the packages installed in your environment. If you search for it, you should see `scikit-image` in the list!
+
+## Install Jupyter lab
+
+[Jupyter lab](https://jupyter.org/) is a powerful web appliation that you can use to edit and execute Python code. You can install it in your environment just like a regular Python package, using [pip](https://pip.pypa.io/en/stable/). Type the following command in your terminal:
 
 ```bash
 pip install jupyterlab
 ```
 
-The `pip` program is included with Python. It searches for and lets you install packages from the official Python Package Index, also known as [PyPI](https://pypi.org/). 
-
 ````{admonition} Check your installation
-Type `jupyter lab` in your terminal. This should start the Jupyter lab application you just installed in your web browser. To stop Jupyter lab, close the web browser and press `Ctrl+C` in your terminal window.
+Type `jupyter lab` in your terminal. This should start the Jupyter lab application you just installed in your web browser. To stop Jupyter lab, press `Ctrl+C` in your terminal window.
 
 ```{image} ../../../images/jlab-3.gif
 :align: center
+:width: 95%
 ```
 ````
 
-**Image analysis packages**
+One of the main features of Jupyter Lab is to enable viewing and editing `Jupyter notebooks`, which are interactive documents that combine code, visualizations, and narrative text, and are used by scientists to experiment with code and and demosntrate workflows. To have a better idea of what this looks like, you can have a look at our [Notebook case studies](../../exploring_further/notebook_case_studies/page.md) page.
 
-Many packages are available for image processing and analysis in Python. For example:
-
-```{code-cell} ipython3
-:tags: [remove-input]
-
-import pandas as pd
-from itables import init_notebook_mode
-from itables import show
-
-init_notebook_mode(all_interactive=True, connected=True)
-
-df = pd.DataFrame.from_dict({
-    'Package': [
-        '<a href="https://opencv.org/">OpenCV</a>',
-        '<a href="https://scikit-image.org/">Scikit-image</a>',
-        '<a href="https://scipy.org/">Scipy</a>',
-        '<a href="https://simpleitk.org/">SimpleITK</a>',
-        '<a href="https://github.com/clEsperanto/pyclesperanto_prototype">py-clesperanto</a>',
-    ],
-    'Description': [
-        "Computer vision library in Python and C++.", 
-        "Image processing and analysis in Python.", 
-        "Scientific computing in Python.", 
-        "Image processing of 3D volumes and medical data.", 
-        "GPU-accelerated image processing."
-    ],
-    'Install command': [
-        'pip install opencv-python',
-        'pip install scikit-image',
-        'pip install scipy',
-        'pip install SimpleITK',
-        'pip install pyclesperanto',
-    ]
-})
-
-df["Install command"] = [
-    '<code class="docutils literal notranslate"><span class="pre">{}</span></code>'.format(name)
-    for name in df["Install command"]
-]
-
-show(
-    df, 
-    classes="display compact", 
-    columnDefs=[
-        # {"width": "100%", "targets": [0]},
-        {"className": "dt-left", "targets": "_all"}
-    ],
-    style="width:100%;margin:auto",
-    paging=False,
-    showIndex=False,
-)
-```
-
-The choice of library to install depends on your specific project. For now, you can run a `pip install scikit-image` in your virtual environment. Scikit-image will provide you with a useful collection of algorithms for image processing and analysis.
-
-**Napari**
+## Install Napari
 
 [Napari](https://www.napari.org/) is a multi-dimensional image viewer for Python. It is used to visualize scientific images and the data associated with them, including segmentation masks, bounding boxes, and keypoints.
 
@@ -168,7 +149,7 @@ With Napari, you can
 - annotate data (draw masks, polygons, etc.).
 - use [plugins from the community](https://www.napari-hub.org/) or develop and share your own plugin.
 
-Install [Napari](https://napari.org/stable/) by typing the following command:
+We recommend that you install [Napari](https://napari.org/stable/) by typing the following command:
 
 ```bash
 pip install "napari[all]"
@@ -178,16 +159,17 @@ pip install "napari[all]"
 With your virtual environment activated, type `napari` in your terminal. The Napari viewer should open **in a separate window**.
 ```{image} ../../../images/napari_terminal.gif
 :align: center
+:width: 95%
 ```
 ````
 
 You can also find the official Napari installation instructions [here](https://napari.org/stable/tutorials/fundamentals/installation.html#installation).
 
-## Use a code editor
+## Install a code editor
 
 Code editors provide many useful features, including syntax highlighting, a file system manager, integrated terminals, and code auto-completion. You can also interact with Jupyter notebooks directly in your code editor instead of using your web browser.
 
-We recommend that you pick one of the code editors below.
+We recommend that you pick and try one of the code editors below.
 
 ````{grid} 1 1 2 3
 ```{grid-item-card}
@@ -214,7 +196,7 @@ Spyder
 
 Setting up Python for working on your image analysis project typically involves the following steps.
 
-- Install Python and *conda* through **Miniconda**.
-- Set up a **virtual environment** to isolate the Python packages you install from the rest of your system.
-- Install packages, such as **Jupyter lab**, **Scikit-image** and **Napari** in your virtual environment using *pip*.
-- Develop code either in Jupyter lab or in a dedicated **code editor**.
+- Installing Python and *conda* through **Miniconda**.
+- Creating a **virtual environment** for your project.
+- Installing packages in your virtual environment using *pip*.
+- Installing a program to develop code, such as **Jupyter lab** or a **code editor**.

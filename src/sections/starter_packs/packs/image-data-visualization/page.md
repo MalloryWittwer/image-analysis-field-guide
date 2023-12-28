@@ -16,6 +16,11 @@ kernelspec:
 
 A number of software tools exist to help visualize scientific images and the data associated with them, such as segmentation masks, bounding boxes, and keypoints, for example.
 
+```{code-cell} ipython3
+:tags: [remove-input]
+tags = ["Visualization"]
+```
+
 ## 🌐 Online resources
 
 ```{code-cell} ipython3
@@ -28,8 +33,6 @@ sys.path.append(str(Path.cwd().parents[3]))
 from helpers import *
 
 init_notebook_mode(all_interactive=True, connected=True)
-
-tags = ["Visualization"]
 
 df = filter_online_resources(tags)
 show_online_resources(df)
