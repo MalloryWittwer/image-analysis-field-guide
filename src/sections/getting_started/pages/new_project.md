@@ -185,8 +185,9 @@ Using a consistent project structure like this one makes it easier for you to sh
 
 From here, you should be ready to start developing image analysis pipelines for your project. To help you refine your objectives, consider filling in one of our [Image Analysis Project Sheets](https://docs.google.com/document/d/1NUFKOpXunjs9hOxmn5RvLNrfcF0DhXfgoVGIL3-eXiA/).
 
-A few more resources:
+A few more resources from [The Turing Way](https://the-turing-way.netlify.app/index.html):
 
-- [Naming files, folders and other things (The Turing Way)](https://the-turing-way.netlify.app/project-design/filenaming)
-- [Getting Started Checklist (The Turing Way)](https://the-turing-way.netlify.app/project-design/pd-checklist)
-- [Getting Started With GitHub (The Turing Way)](https://the-turing-way.netlify.app/collaboration/github-novice)
+- [Naming files, folders and other things](https://the-turing-way.netlify.app/project-design/filenaming)
+- [Getting Started Checklist](https://the-turing-way.netlify.app/project-design/pd-checklist)
+- [Getting Started With GitHub](https://the-turing-way.netlify.app/collaboration/github-novice)
+- [Guide for Project Design](https://the-turing-way.netlify.app/project-design/project-design)

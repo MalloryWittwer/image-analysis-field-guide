@@ -15,6 +15,11 @@ New to image analysis? These short guides will help you start off on the right f
 
 ## 🚀 Starter packs
 
+````{margin}
+```{tip}
+Use `Ctrl+K` to search the entire book!
+```
+````
 We’ve curated resources and grouped them by topic.
 
 ````{grid} 1 1 2 3
@@ -73,3 +78,9 @@ Join our *Matrix server* by connecting to [element.epfl.ch](https://element.epfl
 ## 🤝 Contribute
 
 Send an email to imaging@epfl.ch if you’d like to contribute to this material. We’d be happy to receive your suggestions and to know more about the topics you are interested in!
+
+## 🗨️ Comment
+
+```{tip}
+You can add comments to any page of this book; check-out the `<` button in the upper-right corner of this page!
+```
