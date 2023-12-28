@@ -40,6 +40,8 @@ jobs:
         uses: actions/configure-pages@v2
       - uses: aganders3/headless-gui@v1
         name: Build workshop
+        env:
+          NOTION_KEY: ${{ secrets.NOTION_KEY }}
         with:
           run: |
             pip install -r requirements.txt
