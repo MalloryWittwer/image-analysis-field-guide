@@ -24,7 +24,11 @@ from pathlib import Path
 
 init_notebook_mode(all_interactive=True, connected=True)
 
-df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'notebook_case_studies.csv')
+import sys
+sys.path.append(str(Path.cwd().parents[2]))
+from helpers import DATAFRAME_NOTEBOOK_CASE_STUDIES
+df = DATAFRAME_NOTEBOOK_CASE_STUDIES.copy()
+# df = pd.read_csv(Path.cwd().parents[3] / 'db' / 'notebook_case_studies.csv')
 
 df["Title"] = [
     '<a href="./notebooks/{}">{}</a>'.format(link, name)

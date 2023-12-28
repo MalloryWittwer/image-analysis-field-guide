@@ -1,9 +1,0 @@
-Title,Description,Image,Link,Keywords
-n-D Image data visualization in Napari,Introduction to the Napari viewer and segmentation of a 3D CT scan of a granular material sample using the watershed transform.,segmentation_fig.png,segmentation_3d.html,"Image segmentation, Visualization"
-Cell detection and tracking,"Detection, tracking, and visualization of dividing cell nuclei in a timeseries.",tracking_fig.png,tracking_2d.html,"Object detection, Tracking, Visualization"
-Skeleton analysis of a drosophila trachea,Analysis of the elongated branching structure of a drosophila trachea in a 3D confocal image using the Skan package.,drosofig.png,skeletonization.html,Visualization
-Lungs convex hull detection,Segmentation of the convex hull of the lungs of a mouse in a CT scan (3D).,lungs_fig.png,lungs_segmentation_ct.html,"Image segmentation, Image denoising, Visualization"
-Annotating triangular crystallites,Interactive annotation of triangular crystallites and visualization of their orientation distribution.,triangles_fig.png,crystallites_annotation.html,Visualization
-Digital image correlation,Registration of two 3D images by the optical flow method using the spam package.,dic_fig.png,image_correlation.html,"Image registration, Visualization"
-Cell nuclei detection,Deep learning based segmentation of cell nuclei in H&E images using StarDist.,stardist_fig.png,nuclei_stardist.html,"Image segmentation, Visualization
-"
